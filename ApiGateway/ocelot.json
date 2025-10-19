@@ -23,7 +23,8 @@
         "Period": "60s",
         "PeriodTimespan": 6,
         "Limit": 2
-      }
+      },
+      "key": "userService"
     },
     {
       "DownstreamPathTemplate": "/api/WeatherForecast",
@@ -48,7 +49,8 @@
         "Period": "60s",
         "PeriodTimespan": 6,
         "Limit": 2
-      }
+      },
+      "key": "weatherService"
     },
     {
       "DownstreamPathTemplate": "/api/account/login/{email}/{password}",
@@ -73,6 +75,15 @@
       ],
       "UpstreamPathTemplate": "/api/account/register/{email}/{password}",
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
+    }
+  ],
+  "Aggregates": [
+    {
+      "RouteKeys": [
+        "userService",
+        "weatherService"
+      ],
+      "UpstreamPathTemplate": "/api/aggregate"
     }
   ],
   "GlobalConfiguration": {
