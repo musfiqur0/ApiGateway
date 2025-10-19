@@ -16,6 +16,13 @@
         "Region": "default",
         "Header": "OC-Caching-Control",
         "EnableContentHashing": false
+      },
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "60s",
+        "PeriodTimespan": 6,
+        "Limit": 2
       }
     },
     {
@@ -34,6 +41,13 @@
         "Region": "default",
         "Header": "OC-Caching-Control",
         "EnableContentHashing": false
+      },
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "60s",
+        "PeriodTimespan": 6,
+        "Limit": 2
       }
     },
     {
