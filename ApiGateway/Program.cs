@@ -1,5 +1,6 @@
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
+using SharedLibrary;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,6 +18,7 @@ var app = builder.Build();
 
 app.UseCors();
 app.UseHttpsRedirection();
+app.UseMiddleware<TokenCheckerMiddleware>();
 app.UseMiddleware<InterceptionMiddleware>();
 app.UseAuthentication();
 
